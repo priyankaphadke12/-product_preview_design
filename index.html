@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Design</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #ddd6f3 0%, #faaca8 51%, #ddd6f3 100%);
+            min-height: 100vh;
+            background-size: 200% auto;
+        }
+
+        #main-product-image {
+            width: 190px;
+            height: 320px;
+            border: 1px solid #e6005c;
+            padding: 6px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+            margin: 30px auto;
+            display: block;
+            background-color: #ffff;
+        }
+
+        .product-image {
+            height: 50px;
+            width: 35px;
+            border: 1px solid#e6005c;
+            border-radius: 10px;
+            padding: 3px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #ffff;
+        }
+
+        .product-images-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="jumber.png" id="main-product-image" />
+
+    <div class="product-images-container">
+
+        <img src="1..jpg" class="product-image" onclick="changeImage('1..jpg')" />
+        <img src="2.jpg" class="product-image" onclick="changeImage('2.jpg')" />
+        <img src="3.jpg" class="product-image" onclick="changeImage('3.jpg')" />
+        <img src="4.png" class="product-image" onclick="changeImage('4.png')" />
+        <img src="5.png" class="product-image" onclick="changeImage('5.png')" />
+        <img src="6.png" class="product-image" onclick="changeImage('6.png')" />
+
+    </div>
+
+    <script>
+
+        function changeImage(imageName) {
+            const mainImage = document.getElementById('main-product-image');
+            mainImage.src = imageName;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
